@@ -35,26 +35,22 @@ export const NavBar = ({ token, setToken }) => {
       </div>
 
       <div className="navbar-menu w-full" ref={navbar}>
-        <div className="navbar-start">
+        <div className="navbar-start flex space-x-4"> 
           {token ? (
             <>
-              <Link to="/" className="navbar-item text-blue-500">
+              <Link to="/" className="navbar-item text-blue-500 nav-link">
                 <HomeIcon className="w-8 h-8 mr-2" />
               </Link>
 
-              <Link to="/vehicles" className="navbar-item text-blue-500">
-        {/* <DocumentTextIcon className="w-6 h-6 mr-2" />  */}
-        Fleet
-      </Link>
-              <Link to="/clients" className="navbar-item text-blue-500">
-        {/* <UserCircleIcon className="w-6 h-6 mr-2" />  */}
-        Clients
-      </Link>
-              <Link to="/jobs" className="navbar-item text-blue-500">
-        {/* <CogIcon className="w-6 h-6 mr-2" />  */}
-        Jobs
-      </Link>
-             
+              <Link to="/vehicles" className="navbar-item text-blue-500 nav-link">
+                Fleet
+              </Link>
+              <Link to="/clients" className="navbar-item text-blue-500 nav-link">
+                Clients
+              </Link>
+              <Link to="/jobs" className="navbar-item text-blue-500 nav-link">
+                Jobs
+              </Link>
             </>
           ) : (
             ""
@@ -76,9 +72,7 @@ export const NavBar = ({ token, setToken }) => {
                 </button>
               ) : (
                 <>
-                  {/* <Link to="/postLists" className="button is-outlined text-blue-500">
-                    Posts
-                  </Link> */}
+                 
                   <Link to="/register" className="button is-link text-white-500">
                     Register
                   </Link>
