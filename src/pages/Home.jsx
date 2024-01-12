@@ -65,7 +65,7 @@ useEffect(() => {
 
     <div className="user-info-container bg-gray-300 p-6 rounded-md shadow-md">
       <h2 className="text-xl font-semibold mb-2 text-blue-800">
-        {shuttleUser.user.first_name} {shuttleUser.user.last_name}
+        {shuttleUser.first_name} {shuttleUser.last_name}
       </h2>
 
       <button className="bg-blue-500 text-white px-4 py-2 rounded-md"

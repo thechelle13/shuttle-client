@@ -42,15 +42,15 @@ export const NavBar = ({ token, setToken }) => {
                 <HomeIcon className="w-8 h-8 mr-2" />
               </Link>
 
-              <Link to="/vehicleList" className="navbar-item text-blue-500">
+              <Link to="/vehicles" className="navbar-item text-blue-500">
         {/* <DocumentTextIcon className="w-6 h-6 mr-2" />  */}
         Fleet
       </Link>
-              <Link to="/shuttleUsers" className="navbar-item text-blue-500">
+              <Link to="/clients" className="navbar-item text-blue-500">
         {/* <UserCircleIcon className="w-6 h-6 mr-2" />  */}
-        Employees
+        Clients
       </Link>
-              <Link to="/jobList" className="navbar-item text-blue-500">
+              <Link to="/jobs" className="navbar-item text-blue-500">
         {/* <CogIcon className="w-6 h-6 mr-2" />  */}
         Jobs
       </Link>
