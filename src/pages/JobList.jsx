@@ -5,7 +5,8 @@ import { getJobs } from "../services/jobServices";
 
 export const JobList = ({setToken, token}) => {
 
-    const [jobs, setJobs] =([])
+    const [jobs, setJobs] = useState([]);
+
     const [sortBy, setSortBy] = useState("publication_date");
 
     const getAndSetJobs = () => {
