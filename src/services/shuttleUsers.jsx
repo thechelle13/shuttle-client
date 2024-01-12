@@ -9,19 +9,19 @@ export const getShuttleUser = () => {
   };
 
   export const editShuttleUser = (shuttleuserId, updatedShuttleUser) => {
-    return fetch(`http://localhost:8000/users/techusers/${shuttleuserId}`, {
+    return fetch(`http://localhost:8000/users/shuttleusers/${shuttleuserId}`, {
       method: "PUT",
       headers: {
         Authorization: `Token ${localStorage.getItem("auth_token")}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updatedShuttleUser), // Use updatedTechUser instead of techuserId
+      body: JSON.stringify(updatedShuttleUser), 
     });
   };
   
 
-    export const deleteShuttleUser = (shuttleuserId) => {
-        return fetch(`http://localhost:8000/users/techusers/${shuttleuserId}`, 
+  export const deleteShuttleUser = (shuttleuserId) => {
+        return fetch(`http://localhost:8000/users/shuttleusers/${shuttleuserId}`, 
         {
             method: "DELETE",
             headers: {
