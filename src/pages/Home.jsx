@@ -18,13 +18,12 @@ let navigate = useNavigate();
 useEffect(() => {
   const getAndSetShuttleUser = async () => {
     const shuttleUser = await getShuttleUser();
+    // console.log(shuttleUser);
     setShuttleUser(shuttleUser);
   };
 
   getAndSetShuttleUser();
 }, []);
-
-
 
 // const containerStyle = {
 //   width: '400px',
@@ -35,7 +34,6 @@ useEffect(() => {
 //   lat: 36.1245, // Replace with the actual latitude of BNA, Nashville Airport
 //   lng: -86.6784, // Replace with the actual longitude of BNA, Nashville Airport
 // };
-
 
 useEffect(() => {
   // Get the visit count from localStorage
@@ -65,7 +63,11 @@ useEffect(() => {
 
     <div className="user-info-container bg-gray-300 p-6 rounded-md shadow-md">
       <h2 className="text-xl font-semibold mb-2 text-blue-800">
-        {shuttleUser.first_name} {shuttleUser.last_name}
+        {shuttleUser.user && (
+          <>
+          {shuttleUser.user.first_name} {shuttleUser.user.last_name}
+          </>
+        )}
       </h2>
 
       <button className="bg-blue-500 text-white px-4 py-2 rounded-md"
